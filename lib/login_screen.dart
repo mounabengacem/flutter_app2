@@ -1,4 +1,6 @@
 import 'package:app_3/config/config.dart';
+import 'package:app_3/email_pass_signup.dart';
+import 'package:app_3/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -57,7 +59,12 @@ class LoginScreen extends StatelessWidget {
             ),
             ),
           InkWell(
-              onTap: (){},
+              onTap: (){
+                Navigator.push(
+              context, 
+              MaterialPageRoute(builder: (context)=> HomeScreen() ) );
+               
+              },
               child:Container(
                 decoration: BoxDecoration (
                   gradient: LinearGradient(
@@ -72,7 +79,11 @@ class LoginScreen extends StatelessWidget {
                 )
             ),
           
-          FlatButton(onPressed: (){},
+          FlatButton(onPressed: (){
+            Navigator.push(
+              context, 
+              MaterialPageRoute(builder: (context)=> EmailPassSignupScreen() ) );
+          },
            child: Text("Sign up using Email")),
           
           Container(
@@ -81,13 +92,13 @@ class LoginScreen extends StatelessWidget {
               children: <Widget> [
               FlatButton.icon(
                 onPressed: (){},
-                icon: Icon(FontAwesomeIcons.google), color: Colors.red,
-                label: Text("Sign in using Email", style: TextStyle (color:Colors.red),),),
+                icon: Icon(FontAwesomeIcons.google ,color: Colors.red,),
+                label: Text("Sign_in with Email", style: TextStyle (color:Colors.red),),),
 
                FlatButton.icon(
                 onPressed: (){},
-                icon: Icon(Icons.phone), color: Colors.blue,
-                label: Text("Sign in using Phone", style: TextStyle (color:Colors.blue),),) 
+                icon: Icon(Icons.phone ,color: Colors.blue),
+                label: Text("Sign_in with Phone", style: TextStyle (color:Colors.blue),),) 
                   
                 ],),
           )
