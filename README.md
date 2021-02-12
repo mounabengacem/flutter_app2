@@ -2,6 +2,8 @@
 
 A new Flutter project.
 1)login screen
+2)sign up screen
+3) add tasks screen
 
 ## Getting Started
 
